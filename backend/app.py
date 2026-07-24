@@ -26,20 +26,17 @@ app = Flask(__name__)
 # this API. In production, restrict this to your actual frontend
 # domain instead of "*" — see the comment below.
 ALLOWED_ORIGINS = [
-    "http://127.0.0.1:5500",     # VS Code Live Server default
+    "http://127.0.0.1:5500",
     "http://localhost:5500",
     "http://localhost:3000",
-    # Add your deployed frontend URL here once you have it, e.g.:
-    # Production frontend
     "https://startup-portfolio-one.vercel.app",
 ]
+
 CORS(
     app,
-    resources={
-        r"/api/*": {
-            "origins": ALLOWED_ORIGINS
-        }
-    }
+    origins=ALLOWED_ORIGINS,
+    methods=["GET", "POST", "OPTIONS"],
+    allow_headers=["Content-Type"],
 )
 
 EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
