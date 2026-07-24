@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+        <h1>📋 Client Submissions</h1>
+        
+        <p>Total inquiries received from NovaStart.</p>
+        
+        <p id="submissionCount">Loading submissions...</p>
+
+    <table id="submissionsTable">
+
+        <thead>
+
+            <tr>
+
+                <th>Name</th>
+
+                <th>Email</th>
+
+                <th>Company</th>
+
+                <th>Budget</th>
+
+                <th>Message</th>
+
+                <th>Date</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="tableBody">
+
+
+        </tbody>
+
+    </table>
+        <script>
+
+        const API_URL = "https://startup-portfolio-api.onrender.com/api/submissions";
+        const tableBody = document.getElementById("tableBody");
+
+        fetch(API_URL)
+         .then(response => response.json())
+         .then(data => {document.getElementById("submissionCount").textContent =
+    `Total Submissions: ${data.length}`;
+    if (data.length === 0) {
+    tableBody.innerHTML =
+        `<tr><td colspan="6">No submissions yet.</td></tr>`;
+    return;
+}
+              data.forEach(item => {
+        const formattedDate = new Date(item.received_at).toLocaleString("en-IN", {
+        dateStyle: "medium",
+        timeStyle: "short"
+    });
+
+    const row = `
+        <tr>
+            <td>${item.name}</td>
+            <td>${item.email}</td>
+            <td>${item.company}</td>
+            <td>${item.budget}</td>
+            <td>${item.message}</td>
+            <td>${formattedDate}</td>
+        </tr>
+    `;
+
+    tableBody.innerHTML += row;
+
+    });
+         });
+
+       </script>
+</body>
+
+</html>
