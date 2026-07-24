@@ -30,9 +30,17 @@ ALLOWED_ORIGINS = [
     "http://localhost:5500",
     "http://localhost:3000",
     # Add your deployed frontend URL here once you have it, e.g.:
-    # "https://novastart.vercel.app",
+    # Production frontend
+    "https://startup-portfolio-one.vercel.app",
 ]
-CORS(app, resources={r"/api/*": {"origins": ALLOWED_ORIGINS}})
+CORS(
+    app,
+    resources={
+        r"/api/*": {
+            "origins": ALLOWED_ORIGINS
+        }
+    }
+)
 
 EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
 SUBMISSIONS_FILE = os.path.join(os.path.dirname(__file__), "submissions.jsonl")
