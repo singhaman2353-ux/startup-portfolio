@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaStart — Product Studio for Founders Who Ship</title>
+  <meta name="description" content="NovaStart is a product studio that takes early-stage ideas from inquiry to kickoff in days, not months.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="top">
+    <div class="nav__inner">
+      <a href="#top" class="nav__brand">Nova<span>Start</span></a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#pipeline">Process</a>
+        <a href="#contact" class="nav__cta">Start an intake</a>
+      </nav>
+      <button class="nav__burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav__mobile" id="mobileMenu" aria-label="Mobile">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#pipeline">Process</a>
+      <a href="#contact">Start an intake</a>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero__inner">
+      <p class="eyebrow">Product studio · est. 2024</p>
+      <h1 class="hero__title">
+        We take your idea from <span class="hero__underline">inquiry</span> to
+        <span class="hero__underline">kickoff</span> in 9 days.
+      </h1>
+      <p class="hero__sub">
+        NovaStart is a small studio for founders who need a working product, not another deck.
+        Tell us what you're building below — a real person reviews every submission within 24 hours.
+      </p>
+      <div class="hero__actions">
+        <a href="#contact" class="btn btn--primary">Submit your intake</a>
+        <a href="#pipeline" class="btn btn--ghost">See how it works</a>
+      </div>
+      <div class="hero__stats">
+        <div><strong>36</strong><span>products shipped</span></div>
+        <div><strong>9 days</strong><span>avg. time to kickoff</span></div>
+        <div><strong>4.9/5</strong><span>founder rating</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="services" id="services">
+    <div class="section__head">
+      <p class="eyebrow">Services</p>
+      <h2>Three ways we plug in</h2>
+    </div>
+    <div class="services__grid">
+      <article class="service-card">
+        <div class="service-card__mark">01</div>
+        <h3>Product Build</h3>
+        <p>Full-stack design and engineering for your MVP — from first wireframe to a live, usable product.</p>
+        <ul>
+          <li>Web &amp; mobile-responsive apps</li>
+          <li>API &amp; database architecture</li>
+          <li>Launch-ready in weeks</li>
+        </ul>
+      </article>
+      <article class="service-card">
+        <div class="service-card__mark">02</div>
+        <h3>Brand &amp; Frontend</h3>
+        <p>A visual identity and marketing site that make a pre-revenue startup look like it already has traction.</p>
+        <ul>
+          <li>Design systems</li>
+          <li>Landing &amp; marketing pages</li>
+          <li>Conversion-focused copy</li>
+        </ul>
+      </article>
+      <article class="service-card">
+        <div class="service-card__mark">03</div>
+        <h3>Technical Advisory</h3>
+        <p>Fractional CTO support for founders who need an honest technical read before they hire full-time.</p>
+        <ul>
+          <li>Architecture reviews</li>
+          <li>Hiring &amp; roadmap planning</li>
+          <li>Ongoing office hours</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ PIPELINE (signature element) ============ -->
+  <section class="pipeline" id="pipeline">
+    <div class="section__head">
+      <p class="eyebrow">Process</p>
+      <h2>Your intake, tracked end to end</h2>
+      <p class="section__sub">Every submission moves through the same four stages. No black box, no radio silence.</p>
+    </div>
+    <div class="pipeline__track">
+      <div class="pipeline__line"></div>
+      <div class="pipeline__stage" data-stage="1">
+        <div class="pipeline__dot"></div>
+        <h4>Inquiry received</h4>
+        <p>Your form hits our intake queue instantly.</p>
+        <span class="pipeline__time">Day 0</span>
+      </div>
+      <div class="pipeline__stage" data-stage="2">
+        <div class="pipeline__dot"></div>
+        <h4>Founder review</h4>
+        <p>A studio partner reads every brief personally.</p>
+        <span class="pipeline__time">Day 1–2</span>
+      </div>
+      <div class="pipeline__stage" data-stage="3">
+        <div class="pipeline__dot"></div>
+        <h4>Scoped proposal</h4>
+        <p>You get timeline, team, and cost — no vague retainers.</p>
+        <span class="pipeline__time">Day 3–7</span>
+      </div>
+      <div class="pipeline__stage" data-stage="4">
+        <div class="pipeline__dot"></div>
+        <h4>Kickoff call</h4>
+        <p>We start building. You get a live progress board.</p>
+        <span class="pipeline__time">Day 9</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="contact__grid">
+      <div class="contact__intro">
+        <p class="eyebrow">Client intake</p>
+        <h2>Tell us what you're building</h2>
+        <p class="section__sub">
+          This form goes straight into our review queue. Fields marked required take under two minutes to fill.
+        </p>
+        <div class="contact__meta">
+          <div><span>Email</span>hello@novastart.studio</div>
+          <div><span>Based in</span>Nagpur, India — working worldwide</div>
+        </div>
+      </div>
+
+      <form id="intakeForm" class="contact__form" novalidate>
+        <div class="form__row">
+          <label for="name">Full name *</label>
+          <input type="text" id="name" name="name" required autocomplete="name">
+        </div>
+        <div class="form__row">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+        <div class="form__row">
+          <label for="company">Company / project name</label>
+          <input type="text" id="company" name="company" autocomplete="organization">
+        </div>
+        <div class="form__row">
+          <label for="budget">Estimated budget</label>
+          <select id="budget" name="budget">
+            <option value="">Select a range</option>
+            <option value="under-2k">Under $2,000</option>
+            <option value="2k-10k">$2,000 – $10,000</option>
+            <option value="10k-plus">$10,000+</option>
+            <option value="not-sure">Not sure yet</option>
+          </select>
+        </div>
+        <div class="form__row form__row--full">
+          <label for="message">Tell us about the project *</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--primary form__submit" id="submitBtn">
+          <span class="btn__label">Submit intake</span>
+        </button>
+
+        <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a href="#top" class="nav__brand">Nova<span>Start</span></a>
+      <p>&copy; 2026 NovaStart Studio. Built by Aman Singh.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
