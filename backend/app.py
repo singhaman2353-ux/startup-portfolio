@@ -98,6 +98,14 @@ def contact():
     app.logger.info("New intake from %s <%s>", record["name"], record["email"])
     return jsonify({"message": "Intake received.", "data": record}), 201
 
+@app.route("/api/submissions", methods=["GET"])
+def submissions():
+    try:
+        with open(SUBMISSIONS_FILE, "r", encoding="utf-8") as f:
+            data = [json.loads(line) for line in f]
+        return jsonify(data), 200
+    except FileNotFoundError:
+        return jsonify([]), 200
 
 if __name__ == "__main__":
     # Render/Railway inject PORT; default to 5000 for local dev.
